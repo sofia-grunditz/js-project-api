@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "message": "I'm grateful for sunshine and coffee.",
+    "hearts": 3,
+    "createdAt": "2024-05-01T10:00:00Z"
+  },
+  {
+    "id": 2,
+    "message": "I coded something without crying today 💻",
+    "hearts": 7,
+    "createdAt": "2024-05-02T13:23:00Z"
+  },
+  {
+    "id": 3,
+    "message": "Fresh laundry smell is underrated.",
+    "hearts": 5,
+    "createdAt": "2024-05-03T08:15:00Z"
+  }
+]
