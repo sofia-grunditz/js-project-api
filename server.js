@@ -16,14 +16,26 @@ mongoose.Promise = Promise;
 
 const app = express();
 const port = process.env.PORT || 5050;
+import cors from 'cors';
+
+const allowedOrigins = [
+  'https://happythoughts-sofia-baker.netlify.app',
+  'http://localhost:5173'
+];
 
 app.use(
   cors({
-    origin: 'https://happythoughts-sofia-baker.netlify.app',
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
     credentials: true,
   })
 );
-
+console.log('CORS config loaded. Allowed origins:', allowedOrigins);
 
 app.use(express.json());
 
