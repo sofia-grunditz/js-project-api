@@ -11,12 +11,10 @@ import { User } from './models/User.js';
 dotenv.config();
 
 const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/happyThoughts';
-mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.Promise = Promise;
+mongoose.connect(mongoUrl); mongoose.Promise = Promise;
 
 const app = express();
 const port = process.env.PORT || 5050;
-import cors from 'cors';
 
 const allowedOrigins = [
   'https://happythoughts-sofia-baker.netlify.app',
