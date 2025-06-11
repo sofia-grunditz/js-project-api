@@ -19,10 +19,12 @@ const port = process.env.PORT || 5050;
 
 app.use(
   cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://happythoughts-sofia-baker.netlify.app',
     credentials: true,
   })
 );
+
+
 app.use(express.json());
 
 const generateToken = (user) => {
