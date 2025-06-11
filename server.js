@@ -60,7 +60,8 @@ app.post('/register', async (req, res) => {
       });
     }
   } catch (error) {
-    res.status(400).json({ error: 'Could not create user', details: error.message });
+    console.log('Registration error:', error);
+    res.status(400).json({ error: error.message });
   }
 });
 
